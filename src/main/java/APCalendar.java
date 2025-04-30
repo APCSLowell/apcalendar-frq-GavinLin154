@@ -58,12 +58,11 @@ public class APCalendar
   public static int dayOfWeek(int month, int day, int year)
   {
     /* to be implemented in part (b) */
-    int returnValue = 0;
     int firstDay = firstDayOfYear(year);
     int dayYear = dayOfYear(month, day, year);
-    returnValue = firstDay + dayYear - 1;
+    int returnValue = firstDay + (dayYear % 8);
     if(returnValue > 6) {
-      return returnValue % 6;
+      return returnValue % 6 - 1;
     } 
     return returnValue;
   }
