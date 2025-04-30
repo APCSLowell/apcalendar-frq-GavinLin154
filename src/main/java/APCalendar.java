@@ -59,7 +59,7 @@ public class APCalendar
   {
     /* to be implemented in part (b) */
     int returnValue = 0;
-    returnValue = firstDayOfYear(year) + (dayOfYear(month, day, year) % 6);
+    returnValue = firstDayOfYear(year) + dayOfYear(month, day, year);
     if(returnValue > 6) {
       return returnValue % 6;
     }  
